@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.tournamenthelper.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_home2_to_tourneyList"
+            app:destination="@id/tourneyList" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.tournamenthelper.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/tourneyList"
+        android:name="com.example.tournamenthelper.TourneyList"
+        android:label="fragment_tourney_list"
+        tools:layout="@layout/fragment_tourney_list" >
+        <action
+            android:id="@+id/action_tourneyList_to_tournamentdetails"
+            app:destination="@id/tournamentdetails" />
+        <action
+            android:id="@+id/action_tourneyList_to_register"
+            app:destination="@id/register" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.tournamenthelper.register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/tournamentdetails"
+        android:name="com.example.tournamenthelper.tournamentdetails"
+        android:label="fragment_tournamentdetails"
+        tools:layout="@layout/fragment_tournamentdetails" />
+</navigation>
